@@ -31,6 +31,20 @@ NOTE: At all times only one subject image and atleast one background image shoul
 -   Input the position coordinates x,y and the scale factor and wait for the result.
 -   A folder called remove_bg is created and inside you will see all the changed backgrounds on the subject image as different images.
 
+## Results
+
+Subject
+
+![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/images/subject/girl5.jpg?raw=true "Subject")
+
+Background
+
+![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/images/background/sea_cover.JPG?raw=true "Background")
+
+Result
+
+![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/remove_bg/girl5-sea_cover.png?raw=true "Result")
+
 ## References
 
 -   [MaskRCNN](https://github.com/matterport/Mask_RCNN)
