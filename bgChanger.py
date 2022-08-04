@@ -14,8 +14,6 @@ def background_changer(subjectPath, name, pos_w, pos_h, scale):
         bg_name = bgs.split(".")[0]
         subject_image = cv2.imread(subjectPath, cv2.IMREAD_UNCHANGED)
         sub_h, sub_w, _ = subject_image.shape
-
-        os.remove(subjectPath)
         
         valid = validInput(pos_w, pos_h, scale, bg_w, bg_h, sub_w, sub_h)
 
@@ -52,3 +50,5 @@ def background_changer(subjectPath, name, pos_w, pos_h, scale):
             res = cvzone.overlayPNG(bg_image, subject_image, [pos_w, pos_h])
             cv2.imwrite(f'remove_bg/{name}-{bg_name}.png', res)
             print('Background change done')
+    
+    os.remove(subjectPath)

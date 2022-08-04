@@ -76,6 +76,12 @@ def pointillismEffect(imagePath, resPath):
             cv2.ellipse(res, (x, y), (length, stroke_scale), angle, 0, 360, color, -1, cv2.LINE_AA)
 
 
-    cv2.imwrite(res_path, res)
+    # cv2.imwrite(res_path, res)
+
+    # 90 and 10 ratio blend
+    image1 = cv2.imread(imagePath)
+    final_image = cv2.addWeighted(image1, 0.5, res, 0.5, 0.5)
+
+    cv2.imwrite(res_path, final_image)
     print('Pointillism Done')
     os.remove(imagePath)
