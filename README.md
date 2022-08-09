@@ -13,7 +13,7 @@ Using a MaskRCNN model and a DeepLabV3 model for instance segmentation, we can c
 ## How to use
 
 -   Go to the directory where you want this to be installed.
--   Open the terminal and type `git clone https://github.com/simritkaul/background-changer.git`
+-   Open the terminal and type `git clone https://github.com/Simrit-Momenttext/background-changer.git`
 -   Now the project will be cloned. Type `cd background-changer` to enter the project directory.
 -   In the images/background directory you can add the images you wish to use as a background.
 -   In the images/subject directory you can add the image of the person whose background is to be changed.
