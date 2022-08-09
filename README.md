@@ -35,15 +35,15 @@ NOTE: At all times only one subject image and atleast one background image shoul
 
 Subject
 
-![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/images/subject/girl5.jpg?raw=true "Subject")
+![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/images/subject/girl7.jpg?raw=true "Subject")
 
 Background
 
-![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/images/background/sea_cover.JPG?raw=true "Background")
+![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/images/background/Animal_Tracks-cover.png?raw=true "Background")
 
 Result
 
-![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/remove_bg/girl5-sea_cover.png?raw=true "Result")
+![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/remove_bg/girl7-Animal_Tracks-cover.png?raw=true "Result")
 
 ## References
 
