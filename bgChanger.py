@@ -51,4 +51,4 @@ def background_changer(subjectPath, name, pos_w, pos_h, scale):
             cv2.imwrite(f'remove_bg/{name}-{bg_name}.png', res)
             print('Background change done')
     
-    os.remove(subjectPath)
+    # os.remove(subjectPath)

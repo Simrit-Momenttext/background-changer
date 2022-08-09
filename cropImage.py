@@ -17,11 +17,11 @@ def cropImage(imagePath, name, x, y, w, h):
   newData = []
   
   for item in data:
-      if (item[0] <= 10 and item[1] <= 10 and item[2] <= 10):
+      if (item[0] <= 16 and item[1] <= 16 and item[2] <= 16):
           newData.append((0, 255, 0))
       else:
           newData.append(item)
   
   image.putdata(newData)
   image.save(f'remove_bg\{name}-seg-crop.png', "PNG")
-  print("Transparent Segment Background Done")
+  print("Green screen Background Done")

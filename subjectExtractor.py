@@ -33,3 +33,4 @@ def subjectExtractor(imagePath, name):
   cv2.imwrite(f'remove_bg\{name}-segment.png', masked_photo)
   os.remove(imagePath)
   print('Segment Extraction Done')
+  return photo_mask

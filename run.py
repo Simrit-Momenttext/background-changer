@@ -30,9 +30,9 @@ name = imageList[0].split("/")[-1].split(".")[0]
 create_dir('remove_bg')
 
 editImg(imagePath, name)
-subjectExtractor(f'remove_bg\{name}-edited.png', name)
+mask = subjectExtractor(f'remove_bg\{name}-edited.png', name)
 x,y,w,h = bboxFinder(imagePath)
 cropImage(f'remove_bg\{name}-segment.png', name, x, y, w, h)
 pointillismEffect(f'remove_bg\{name}-seg-crop.png', f'remove_bg\{name}-painted.png')
-convertImageBG(f'remove_bg\{name}-painted.png', f'remove_bg\{name}-transparent.png')
+convertImageBG(f'remove_bg\{name}-painted.png', f'remove_bg\{name}-transparent.png', mask, x, y, w, h)
 background_changer(f'remove_bg\{name}-transparent.png', name, pos_w, pos_h, scale)
