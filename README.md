@@ -6,7 +6,7 @@ Using a MaskRCNN model and a DeepLabV3 model for instance segmentation, we can c
 
 -   Trained Model with Weights: [mask_rcnn_coco.h5](https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5)
 
-## DeepLabV3
+## DeepLabV3+
 
 -   Trained Model with Weights: [model.h5](https://drive.google.com/file/d/17QKxSIBFhyJoDps93-sCVHnVV6UWS1sG/view?usp=sharing)
 
@@ -24,22 +24,22 @@ Using a MaskRCNN model and a DeepLabV3 model for instance segmentation, we can c
 -   To activate the virtual environment on Powershell type `venv/Scripts/Activate.ps1`.
 -   To install the packages required, type `pip install -r requirements.txt`.
 -   Run the code by typing `python run.py`
--   Input the path of the subject image, the path of the background image and the position coordinates x,y and wait for the result.
--   A folder called remove_bg is created and inside you will see all the changed backgrounds on the subject image as different images.
+-   Input the path of the subject and background images, the position coordinates and and the scaling factor of the image and wait for the result.
+-   A folder called results is created and inside you will see all the changed backgrounds on the subject image as different images.
 
 ## Results
 
 Subject
 
-![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/images/subject/girl7.jpg?raw=true "Subject")
+![Subject](https://github.com/Simrit-Momenttext/Photo-BG-Changer/blob/master/images/subject/girl7.jpg?raw=true "Subject")
 
 Background
 
-![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/images/background/Animal_Tracks-cover.png?raw=true "Background")
+![Background](https://github.com/Simrit-Momenttext/Photo-BG-Changer/blob/master/images/background/Animal_Tracks-cover.png?raw=true "Background")
 
 Result
 
-![Subject](https://github.com/Simrit-Momenttext/background-changer/blob/master/remove_bg/girl7-Animal_Tracks-cover.png?raw=true "Result")
+![Result](https://github.com/Simrit-Momenttext/Photo-BG-Changer/blob/master/remove_bg/girl7-Animal_Tracks-cover.png?raw=true "Result")
 
 ## References
 
