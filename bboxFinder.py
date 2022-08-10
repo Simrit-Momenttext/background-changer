@@ -1,6 +1,6 @@
 from pixellib.instance import instance_segmentation
 import os
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
 def bboxFinder(imagePath):
   segmentation_model = instance_segmentation()

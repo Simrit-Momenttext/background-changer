@@ -1,15 +1,16 @@
 import cv2
 import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 from PIL import Image
 
-def cropImage(imagePath, name, x, y, w, h):
+def cropImage(imagePath, x, y, w, h):
   img = cv2.imread(imagePath, cv2.IMREAD_COLOR)
 
-  cv2.imwrite(f'remove_bg\{name}-seg-crop.png', img[x:w, y:h])
+  cv2.imwrite(f'results\subject-seg-crop.png', img[x:w, y:h])
   os.remove(imagePath)
   print('Segment Crop Done')
      
-  image = Image.open(f'remove_bg\{name}-seg-crop.png')
+  image = Image.open(f'results\subject-seg-crop.png')
   
   data = image.getdata()
 #   print(list(data))
@@ -23,5 +24,5 @@ def cropImage(imagePath, name, x, y, w, h):
           newData.append(item)
   
   image.putdata(newData)
-  image.save(f'remove_bg\{name}-seg-crop.png', "PNG")
+  image.save(f'results\subject-seg-crop.png', "PNG")
   print("Green screen Background Done")
