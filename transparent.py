@@ -1,5 +1,6 @@
 from PIL import Image
 import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 import cv2
 import numpy as np
 from edge_smooth import contour_smooth
@@ -7,9 +8,9 @@ from edge_smooth import contour_smooth
 '''Transparent BG Image'''
 def convertImageBG(imagePath, savePath, mask, x, y, w, h):
 
-  contour_smooth(imagePath, f'remove_bg\smooth-edge.png', mask, x, y, w, h)
+  contour_smooth(imagePath, f'results\smooth-edge.png', mask, x, y, w, h)
 
-  img = Image.open(f'remove_bg\smooth-edge.png')
+  img = Image.open(f'results\smooth-edge.png')
 
   img = img.convert("RGBA")
   
@@ -30,5 +31,5 @@ def convertImageBG(imagePath, savePath, mask, x, y, w, h):
   img.save(savePath, "PNG")
   print("Transparent Segment Background Done")
 
-  os.remove(f'remove_bg\smooth-edge.png')
+  os.remove(f'results\smooth-edge.png')
   os.remove(imagePath)

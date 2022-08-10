@@ -3,3 +3,4 @@ venv/
 deeplab-model.h5
 mask_rcnn_coco.h5
 pointillism/__pycache__/
+results/

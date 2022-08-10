@@ -1,7 +1,9 @@
 import cv2
 import numpy as np
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
-def editImg(imagePath, name):
+def editImg(imagePath):
 
   img = cv2.imread(imagePath, 1)
   # converting to LAB color space
@@ -35,4 +37,4 @@ def editImg(imagePath, name):
 
 
 
-  cv2.imwrite(f'remove_bg\{name}-edited.png', imgnew)
+  cv2.imwrite(f'results\subject-edited.png', imgnew)

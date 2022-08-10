@@ -1,5 +1,5 @@
 import os
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 import tensorflow as tf
 from tensorflow.keras.utils import CustomObjectScope
 from metrics import dice_loss, dice_coef, iou
@@ -11,7 +11,7 @@ H = 512
 W = 512
 
 """ Loading model: DeepLabV3+ """
-def subjectExtractor(imagePath, name):
+def subjectExtractor(imagePath):
   with CustomObjectScope({'iou': iou, 'dice_coef': dice_coef, 'dice_loss': dice_loss}):
     model = tf.keras.models.load_model("deeplab-model.h5")
 
@@ -30,7 +30,7 @@ def subjectExtractor(imagePath, name):
 
   photo_mask = y
   masked_photo = image * photo_mask
-  cv2.imwrite(f'remove_bg\{name}-segment.png', masked_photo)
+  cv2.imwrite(f'results\subject-segment.png', masked_photo)
   os.remove(imagePath)
   print('Segment Extraction Done')
   return photo_mask
